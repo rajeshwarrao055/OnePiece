@@ -2,6 +2,7 @@ package com.personal.OnePiece.jackson.annotations.model;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.personal.OnePiece.jackson.annotations.serialization.model.RawEntity;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

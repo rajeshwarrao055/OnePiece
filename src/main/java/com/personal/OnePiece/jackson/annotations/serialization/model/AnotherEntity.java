@@ -1,4 +1,4 @@
-package com.personal.OnePiece.jackson.annotations.model;
+package com.personal.OnePiece.jackson.annotations.serialization.model;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Builder;
