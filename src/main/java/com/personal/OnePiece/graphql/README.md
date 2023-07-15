@@ -20,6 +20,7 @@ Overall, GraphQL can be used in a wide range of applications where efficient dat
 
 ### References 
 * Reference 1 - [here](https://www.baeldung.com/spring-graphql)
+  * [More basic details here](https://www.baeldung.com/graphql)
 * Reference 2 - [here](https://www.graphql-java.com/tutorials/getting-started-with-spring-boot/) :: Much Better
 
 
