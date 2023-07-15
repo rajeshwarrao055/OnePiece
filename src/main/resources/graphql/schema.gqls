@@ -1,0 +1,11 @@
+type Entity {
+    id: ID!
+    name: String!
+    age: Int!
+    emailId: String
+}
+
+# The Root Query for the application
+type Query {
+    getData(count: Int, offset: Int): [Entity]!
+}
