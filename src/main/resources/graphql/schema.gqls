@@ -23,3 +23,8 @@ type Query {
     getData(count: Int, offset: Int): [Entity]!
     bookById(id: ID): Book
 }
+
+# Root mutation for the application
+type Mutation {
+    addBook(id: ID, name: String, pageCount: Int, authorId: ID) : Book!
+}
