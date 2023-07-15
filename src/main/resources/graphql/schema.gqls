@@ -5,7 +5,21 @@ type Entity {
     emailId: String
 }
 
+type Book {
+  id: ID
+  name: String
+  pageCount: Int
+  author: Author
+}
+
+type Author {
+  id: ID
+  firstName: String
+  lastName: String
+}
+
 # The Root Query for the application
 type Query {
     getData(count: Int, offset: Int): [Entity]!
+    bookById(id: ID): Book
 }
