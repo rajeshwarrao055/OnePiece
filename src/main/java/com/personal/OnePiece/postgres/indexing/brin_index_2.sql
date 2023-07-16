@@ -70,6 +70,8 @@ Planning Time: 0.315 ms
 Execution Time: 10.972 ms
 */
 
+-- works similar to what shows with a btree index
+
 -- after dropping index
 
 /*
