@@ -20,3 +20,12 @@ Information is stored as `nodes`, `relationships` and `properties`
 
 ### More notes
 
+Graph databases are particularly useful when you need to model and query complex relationships between entities.
+
+Scenarios where using a graph database is advantageous :
+* Highly Connected Data : Lots of relationships and dependencies such as social networks, recommendation systems,
+or fraud detection 
+* Hierarchical or networked data 
+* Real-time recommendations and personalization : Graph databases excel at providing real-time recommendations and personalizations
+based on user preference and behaviour. They can model user-item interactions, social connections and contextual information to generate
+personalized suggestions efficiently

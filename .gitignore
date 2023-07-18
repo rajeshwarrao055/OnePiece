@@ -35,3 +35,13 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Neo4j excludes ###
+src/main/**/graphdb/conf/
+src/main/**/graphdb/data/databases/
+src/main/**/graphdb/data/transactions/
+src/main/**/graphdb/logs/
+src/main/**/graphdb/plugins/
+src/main/java/com/personal/OnePiece/graphdb/data/transactions/
+src/main/**/graphdb/data/server_id
+src/main/**/graphdb/import/
