@@ -34,6 +34,13 @@ dependencies {
 	implementation 'org.springframework.data:spring-data-redis:3.1.2'
 	implementation 'redis.clients:jedis:4.4.1'
 
+	//Neo4j dependencies
+	implementation 'org.springframework.data:spring-data-neo4j:7.1.2'
+	// embedded server for neo 4j, docker added in the same package
+	implementation 'org.neo4j:neo4j-ogm-embedded-driver:3.2.41'
+	testImplementation 'org.neo4j:neo4j-ogm-test:3.1.22'
+
+
 	// Junit 5
 	implementation 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
 	compileOnly 'org.projectlombok:lombok'
