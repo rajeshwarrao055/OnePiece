@@ -29,3 +29,64 @@ or fraud detection
 * Real-time recommendations and personalization : Graph databases excel at providing real-time recommendations and personalizations
 based on user preference and behaviour. They can model user-item interactions, social connections and contextual information to generate
 personalized suggestions efficiently
+
+## Understanding Graph DB Queries 
+1. Find actor name "Tom Hanks"
+```
+MATCH (person:Person {name: "Tom Hanks"}) RETURN person
+```
+
+node identifier -> person, label : Person 
+property : name -> value "Tom Hanks"
+
+2. Find movie with the title "Cloud Atlast"
+```
+MATCH (movie: Movie {title : "Cloud Atlas"}) RETURN movie
+```
+
+3. Find 10 people and return their names
+```
+MATCH (people : Person) RETURN people.name LIMIT 10
+```
+
+4. Find movies released in the 1990s and return their titles 
+```
+MATCH (movie : Movie) WHERE movie.released >= 1990 AND movie.released <2000 RETURN movie
+```
+
+### Notes on Queries 
+* MATCH (Describe a data pattern) => `MATCH` clause describes a pattern of graph data. Neo4j will collect all paths within
+the graph which match this pattern. Match describes the structure
+* WHERE (Filter results) => `WHERE` clause imposes conditions on data within a potentially matching path, filtering the result 
+set of a match. 
+
+**Query**
+```
+MATCH (director:Person)-[:DIRECTED]->(movie)
+WHERE director.name = "Steven Spielberg"
+RETURN movie.title
+```
+
+`MATCH (director:Person)-[:DIRECTED]->(movie)` -> specifies the pattern to match in the graph.
+Consists of three parts :
+* `(director:Person)` :: identifer director , matches a node with label Person
+* `[:DIRECTED]` : matches a relationship with type `DIRECTED`. director node is connected to the next part of 
+the pattern via this relationship
+* `->(movie)` : matches a node without specifying a label
+
+### More Queries 
+
+1. What movies did Tom Hanks act in ?
+```
+MATCH (person :Person{name : "Tom Hanks"})-[:ACTED_IN]->(movie :Movie) RETURN person, movie
+```
+
+2. Who directed Cloud Atlas ?
+```
+MATCH(movie : Movie{title : "Cloud Atlas"})<-[:DIRECTED]-(person: Person) RETURN person.name
+```
+
+3. Who were Tom Hanks' co actors ?
+```
+MATCH(person:Person{name : "Tom Hanks"})-[:ACTED_IN]->(movies)<-[:ACTED_IN]-(coActors) RETURN DISTINCT coActors.name
+```

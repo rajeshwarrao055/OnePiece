@@ -18,6 +18,9 @@ public class MovieEntity {
     @Property("tagline")
     private final String description;
 
+    @Property("released")
+    private final int releaseYear;
+
     @Relationship(type = "ACTED_IN", direction = INCOMING)
     private Set<PersonEntity> actors = new HashSet<>();
 
