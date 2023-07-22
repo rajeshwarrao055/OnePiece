@@ -2,6 +2,7 @@ package com.personal.OnePiece.graphdb;
 
 import com.personal.OnePiece.graphdb.data.MovieEntity;
 import com.personal.OnePiece.graphdb.repository.MovieRepository;
+import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +18,7 @@ public class MovieController {
     @Autowired
     private MovieRepository movieRepository;
 
+    @Timed(value = "fetch_movie_entity", description = "Time taken to fetch movie entity by title")
     @GetMapping("/by-title")
     public ResponseEntity<MovieEntity> fetchMovieEntity(@RequestParam String title) {
         return ResponseEntity.ok(movieRepository.findOneByTitle(title));

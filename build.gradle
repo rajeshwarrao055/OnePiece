@@ -37,6 +37,21 @@ dependencies {
 	//Neo4j dependencies
 	implementation 'org.springframework.boot:spring-boot-starter-data-neo4j:3.1.1'
 
+	//spring-boot-starter-actuator
+	implementation 'org.springframework.boot:spring-boot-starter-actuator:3.1.2'
+	// Aspect oriented programming with Spring AOP and aspect j
+	implementation 'org.springframework.boot:spring-boot-starter-aop:3.1.2'
+
+	// micrometer dependency
+	implementation 'io.micrometer:micrometer-core:1.11.2'
+
+	// influx db
+	//implementation 'io.micrometer:micrometer-registry-influx:1.11.2'
+
+	// prometheus
+	implementation 'io.micrometer:micrometer-registry-prometheus:1.11.2'
+
+
 	// Junit 5
 	implementation 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
 	compileOnly 'org.projectlombok:lombok'
