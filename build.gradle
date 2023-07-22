@@ -51,6 +51,9 @@ dependencies {
 	// prometheus
 	implementation 'io.micrometer:micrometer-registry-prometheus:1.11.2'
 
+	//kafka
+	implementation 'org.springframework.kafka:spring-kafka:3.0.9'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux:3.1.2'
 
 	// Junit 5
 	implementation 'org.junit.jupiter:junit-jupiter-engine:5.9.3'

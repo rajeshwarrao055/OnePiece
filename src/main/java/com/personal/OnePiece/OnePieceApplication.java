@@ -5,7 +5,9 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.neo4j.repository.config.EnableNeo4jRepositories;
 import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
+import org.springframework.kafka.annotation.EnableKafka;
 
+@EnableKafka
 @EnableAutoConfiguration
 @EnableNeo4jRepositories
 @EnableRedisRepositories
