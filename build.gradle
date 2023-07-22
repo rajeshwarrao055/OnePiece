@@ -46,7 +46,7 @@ dependencies {
 	implementation 'io.micrometer:micrometer-core:1.11.2'
 
 	// influx db
-	//implementation 'io.micrometer:micrometer-registry-influx:1.11.2'
+	implementation 'io.micrometer:micrometer-registry-influx:1.11.2'
 
 	// prometheus
 	implementation 'io.micrometer:micrometer-registry-prometheus:1.11.2'
