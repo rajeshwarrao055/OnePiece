@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 services:
   zookeeper:
     image: wurstmeister/zookeeper:latest
@@ -13,10 +13,11 @@ services:
     container_name: kafka
     ports:
       - "9092:9092"
+      - "29092:29092"
     environment:
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
-      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_LOCALHOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_LOCALHOST:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_LOCALHOST://0.0.0.0:29092
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_CREATE_TOPICS: "topic1:1:1,topic2:1:1"
     volumes:
