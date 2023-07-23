@@ -3,6 +3,7 @@ services:
   zookeeper:
     image: wurstmeister/zookeeper:latest
     container_name: zookeeper
+    restart: always
     ports:
       - "2181:2181"
     volumes:
@@ -11,6 +12,7 @@ services:
   kafka:
     image: wurstmeister/kafka:latest
     container_name: kafka
+    restart: always
     ports:
       - "9092:9092"
       - "29092:29092"
@@ -27,6 +29,7 @@ services:
 
   kafka-ui:
     container_name: kafka-ui
+    restart: always
     image: provectuslabs/kafka-ui:latest
     ports:
       - "8089:8080"

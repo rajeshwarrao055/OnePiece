@@ -42,3 +42,11 @@ Benefits of Reactive REST APIs:
 * Scalability : can efficiently use server resources and scale well to handle high loads
 * Responsiveness : since server is non bocking, can quickly respond to requests even during heavy traffic
 * Resource efficiency : use fewer threads
+
+### BackPressure 
+By default, reactor applies an automatic backpressure strategy called bounded backpressure. 
+When you subscribe to a flux, reactor automatically requests a limited number of data items from the producer. As subscriber
+consumes, it requests more items from the publisher, ensuring that the processing rate is balanced.
+
+If subscriber can't keep up with the rate of data emission, the backpressure mechanism will slow down the data producer to 
+match subscriber's processing speed, avoiding any overload.
