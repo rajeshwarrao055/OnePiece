@@ -45,3 +45,4 @@ src/main/**/graphdb/plugins/
 src/main/java/com/personal/OnePiece/graphdb/data/transactions/
 src/main/**/graphdb/data/server_id
 src/main/**/graphdb/import/
+src/main/**/graphdb/data/dbms/
