@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.personal'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = "18"
 
 configurations {
 	compileOnly {
@@ -73,3 +73,13 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+/*
+// Configuring JAVA Plugin to use annotation processor
+tasks.withType(JavaCompile) {
+	options.compilerArgs += [
+			'-proc:only',
+			'-processor', 'com.personal.OnePiece.annotation.RGetterAnnotationProcessor'
+	]
+}
+targetCompatibility = JavaVersion.VERSION_18
+ */
