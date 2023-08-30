@@ -9,8 +9,10 @@ import org.springframework.kafka.annotation.EnableKafka;
 
 @EnableKafka
 @EnableAutoConfiguration
+/*
 @EnableNeo4jRepositories
 @EnableRedisRepositories
+*/
 @SpringBootApplication
 public class OnePieceApplication {
 

@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.personal'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = "18"
+sourceCompatibility = "17"
 
 configurations {
 	compileOnly {
@@ -58,6 +58,11 @@ dependencies {
 
 	//Reactive java
 	implementation 'io.projectreactor:reactor-core:3.5.8'
+
+	// Flink
+	implementation 'org.apache.flink:flink-streaming-java:1.17.1'
+	implementation 'org.apache.flink:flink-connector-kafka:1.17.1'
+	implementation 'org.apache.flink:flink-clients:1.17.1'
 
 	// Guava
 	implementation 'com.google.guava:guava:32.1.1-jre'
