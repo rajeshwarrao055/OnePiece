@@ -16,4 +16,9 @@ public class SerDeController {
     public String serialize() {
         return serDeExampleApplication.serializedResult();
     }
+
+    @GetMapping("/deserialize")
+    public void deserialize() {
+        serDeExampleApplication.deserializeString();
+    }
 }
