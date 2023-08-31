@@ -1,7 +1,9 @@
 ### Data Pipelines & ETL
 Reference : https://nightlies.apache.org/flink/flink-docs-release-1.17/docs/learn-flink/etl/
+
 Very Common use case for Flink - implement ETL pipelines that take data from one or more sources,
 perform some transformations and/or enrichments, and then store the results somewhere
+
 Note : Flink's Table and SQL APIs are well suited for many ETL Use cases
 
 #### Stateless Transformations
