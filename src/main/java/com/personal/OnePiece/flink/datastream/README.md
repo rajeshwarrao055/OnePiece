@@ -1,5 +1,6 @@
 ### What can be streamed ?
 Flink's datastream APIs let you stream anything they can serialize
+
 Flink's own serializer used for 
 * basic types - String, Long, Integer, Boolean, Array
 * composite types - POJOs, Tuples, Scala case classes
